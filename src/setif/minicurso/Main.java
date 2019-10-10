@@ -6,16 +6,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
 	
-	public static ConsoleCommandSender cs = Bukkit.getConsoleSender();
+	private ConsoleCommandSender cs = Bukkit.getConsoleSender();
 	
 	@Override
 	public void onEnable() {
-		cs.sendMessage("Vai Brasilian!");
+		cs.sendMessage("Plugin SETIF Ativado!");
+		Bukkit.getPluginManager().registerEvents(new Eventos(), this);
 	}
 	
 	@Override
 	public void onDisable() {
-		cs.sendMessage("Não vai brasilian!");
+		cs.sendMessage("Plugin SETIF Desativado!");
 	}
 	
 }
