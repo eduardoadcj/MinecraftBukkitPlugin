@@ -12,6 +12,7 @@ public class Main extends JavaPlugin{
 	public void onEnable() {
 		cs.sendMessage("Plugin SETIF Ativado!");
 		Bukkit.getPluginManager().registerEvents(new Eventos(), this);
+		getCommand("voar").setExecutor(new VoarCMD());
 	}
 	
 	@Override

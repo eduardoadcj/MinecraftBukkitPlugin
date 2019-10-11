@@ -2,3 +2,6 @@ name: PluginSetif
 version: 1.0.0 ALPHA
 main: setif.minicurso.Main
 authors: [Eduardo]
+commands:
+  voar:
+    aliases: [fly]
