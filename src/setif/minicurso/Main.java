@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
 	
+	public static Main pl;
 	private ConsoleCommandSender cs = Bukkit.getConsoleSender();
 	
 	@Override
@@ -13,6 +14,8 @@ public class Main extends JavaPlugin{
 		cs.sendMessage("Plugin SETIF Ativado!");
 		Bukkit.getPluginManager().registerEvents(new Eventos(), this);
 		getCommand("voar").setExecutor(new VoarCMD());
+		pl = this;
+		saveDefaultConfig();
 	}
 	
 	@Override
